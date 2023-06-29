@@ -1,68 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-<title>Personalized mobility workouts</title>
+    <title>Personalized mobility workouts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
-      body {
-        background: RGB(133, 179, 133);
-      }
-      h1 {
-        font-size: 40px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        color: RGB(35, 90, 66);
-        text-align: center;
-      }
-      h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        color: RGB(37, 99, 74);
-        text-align: center;
-        font-weight: 300;
-      }
-      .bodytext {
-        font-family: 'Montserrat', sans-serif;
-        color: RGB(35, 90, 66);
-        font-weight: 200;
-      }
-      p {
-        font-family: 'Montserrat', sans-serif;
-        color: RGB(35, 90, 66);
-        font-weight: 200;
-      }
       #banner {
+        height: 320px;
         width: 100%;
-        height: 360px;
         object-fit: cover;
-      }
-      #container {
-        max-width: 720px;
-        margin: 0 auto;
-      }
-      button {
-        color: #ffffff;
-        background: RGB(63, 122, 91);
-        border: 10px;
-        border-color: #ffffff;
-        font-size: 24px; 
-        padding: 20px;
-        border-radius: 20px;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-      <h1>GET YOUR PERSONALIZED MOBILITY WORKOUT HERE</h1>
-      <img id="banner" src="https://mobility--solareklips.repl.co/static/banner2.jpg">
-      <h2>About Mobility</h2>
-      <p class="bodytext">
+    <div class="container">
+      <h1 class="text-center mt-4 mb-4">GET YOUR PERSONALIZED MOBILITY WORKOUT HERE</h1>
+      <img class="img-fluid" id="banner" src="https://mobility--solareklips.repl.co/static/banner2.jpg">
+      <h2 class="text-center mt-4 mb-4">About Mobility</h2>
+      <p class="lead">
   Hello, this webapp can make you personalized mobility workouts, based on your inputs! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <h2>Here you can create a personalized mobility workout</h2>
-      <p class="bodytext">Input your preferences for a workout underneath.</p>
-      <div style="text-align: center;">
-      <button>Create workout</button>
-      <p>Copyright 2023, Solareklips</p>
+      <h2 class="text-center mt-4 mb-4">Here you can create a personalized mobility workout</h2>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html'%}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+      <button class="btn btn-primary btn-lg">Create workout</button>
+      <p class="mt-4 mb-4">Copyright 2023, Solareklips</p>
       </div>
     </div>
   </body>
