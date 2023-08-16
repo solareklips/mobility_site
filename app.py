@@ -5,20 +5,18 @@ app = Flask(__name__)
 JOBS = [
   {
     'id' : 1,
-    'title' : 'Equipment',
-    'location' : 'Bengaluru, India',
-    'salary' : 'Rs. 20,00,000'
+    'title' : 'Choose equipment',
+    'info' : 'Choose between a bunch of equipment. If you have none, choose none.',
   },
   {
     'id' : 2,
-    'title' : 'Muscles',
-    'location' : 'Delhi, India',
-    'salary' : 'Rs. 25,00,000'
+    'title' : 'Choose muscle groups',
+    'info' : 'Choose between six major muscle groups, that you want to stretch.',
   },
   {
     'id' : 3,
-    'title' : 'Musclegrups',
-    'location' : 'Junlge, Amazonas'
+    'title' : 'Choose duration',
+    'info' : 'Minimum time for a workout is two minutes, maximum is 60. Only choose whole minutes.'
   },
 ]
 
