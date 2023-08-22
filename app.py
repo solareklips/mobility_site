@@ -32,5 +32,5 @@ def list_jobs():
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
 
-# kommet til 2:23:00 i video tutorialen
+# kommet til 2:34:00 i video tutorialen
 # https://www.youtube.com/watch?v=yBDHkveJUf4&t=6447s
